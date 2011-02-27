@@ -15,13 +15,13 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
 
-public class JProgressBarExample extends JFrame {
+public class JProgressBarTest extends JFrame {
     private JProgressBar firstProgressBar;
     private JProgressBar secondProgressBar;
 
     private JButton paintedBorderButton;
 
-    public JProgressBarExample() {
+    public JProgressBarTest() {
         super("JProgressBar Example");
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -84,7 +84,7 @@ public class JProgressBarExample extends JFrame {
 
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
-                final boolean state = JProgressBarExample.this.firstProgressBar.isBorderPainted();
+                final boolean state = JProgressBarTest.this.firstProgressBar.isBorderPainted();
                 firstProgressBar.setBorderPainted(!state);
                 secondProgressBar.setBorderPainted(!state);
             }
@@ -94,7 +94,7 @@ public class JProgressBarExample extends JFrame {
     }
 
     public static void main(String[] args) {
-        JProgressBarExample jProgressBarExample = new JProgressBarExample();
+        JProgressBarTest jProgressBarExample = new JProgressBarTest();
         jProgressBarExample.setSize(640, 480);
         jProgressBarExample.setVisible(true);
     } 
